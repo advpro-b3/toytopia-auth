@@ -15,6 +15,6 @@ public class UserDetailsResponse {
     private String email;
     private String firstName;
     private String lastName;
-    private String role;
-    private Role roles;
+    private String address;
+    private Role role;
 }
