@@ -17,18 +17,21 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(
-        name = "_user",
-        uniqueConstraints = {
-                @UniqueConstraint(name = "email_unique", columnNames = "email")
-        }
-)
+@Table(name = "_user")
 public class User implements UserDetails {
     @Id
+    @GeneratedValue
+    @Column
+    private Long id;
+    @Column(unique = true)
     private String email;
+    @Column(unique = true)
     private String username;
+    @Column
     private String password;
+    @Column
     private String address;
+    @Column
     @Enumerated(EnumType.STRING)
     private Role role;
 
