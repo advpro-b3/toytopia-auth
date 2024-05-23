@@ -16,8 +16,8 @@ import java.util.function.Function;
 
 @Service
 public class JwtServiceImpl implements JwtService {
-    @Value("${jwt-secret}")
-    private static String SECRET_KEY;
+    @Value("${jwt.secret}")
+    private String SECRET_KEY;
 
     @Override
     public String generateToken(UserDetails userDetails, Map<String, Object> extraClaims) {
