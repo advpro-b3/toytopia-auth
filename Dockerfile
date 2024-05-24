@@ -1,4 +1,4 @@
-FROM gradle:jdk21-alpine
+FROM eclipse-temurin:21
 ARG PRODUCTION
 ARG JDBC_DATABASE_PASSWORD
 ARG JDBC_DATABASE_URL
@@ -13,5 +13,5 @@ ENV JWT_SECRET ${JWT_SECRET}
 
 WORKDIR /app
 COPY ./target/authentication-0.0.1-SNAPSHOT.jar /app/app.jar
-EXPOSE 8080
+EXPOSE 8081
 CMD ["java","-jar","app.jar"]
