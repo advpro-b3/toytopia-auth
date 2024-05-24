@@ -17,6 +17,7 @@ public class UserController {
         return ResponseEntity.ok(
                 UserDetailsResponse
                         .builder()
+                        .id(user.getId())
                         .username(user.getUsername())
                         .email(user.getEmail())
                         .firstName(user.getFirstName())
